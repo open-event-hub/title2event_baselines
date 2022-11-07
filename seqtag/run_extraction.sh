@@ -1,0 +1,22 @@
+CUDA_VISIBLE_DEVICES=3 python run_ner.py \
+    --model_name_or_path ./output/arg_ner_with_prefix/bert-base-chinese \
+    --task_name arg \
+    --trg_encoding_method prefix \
+    --output_dir ./output/arg_ner_with_prefix/bert-base-chinese \
+    --overwrite_output_dir \
+    --train_file ../datasets/Title2Event/tagging_train.csv \
+    --validation_file ../datasets/Title2Event/tagging_dev.csv \
+    --test_file ../datasets/Title2Event/tagging_test.csv \
+    --do_train False --do_eval False \
+    --do_predict \
+    --per_device_train_batch_size=32 \
+    --per_device_eval_batch_size=32 \
+    --num_train_epochs 30 \
+    --save_strategy epoch \
+    --logging_strategy epoch \
+    --evaluation_strategy epoch \
+    --save_total_limit 1 \
+    --load_best_model_at_end \
+    --metric_for_best_model f1 \
+    --text_column_name tokens \
+    --pred_trg_file ./output/trg_ner/bert-base-chinese/trg_predictions.csv \

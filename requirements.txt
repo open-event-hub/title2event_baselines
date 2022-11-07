@@ -1,2 +1,6 @@
+pandas
 transformers>=4.19.0
 datasets>=1.8.0
+evaluate
+seqeval
+tabulate
