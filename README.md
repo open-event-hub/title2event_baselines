@@ -43,7 +43,7 @@ bash run_seq2seqmrc.sh
 ```
 python3 evaluate.py -f [path of file1] [path of file2] ...
 ```
-### Citation
+## Citation
 ```
 @inproceedings{deng-etal-2022-title2event,
     title = "{T}itle2{E}vent: Benchmarking Open Event Extraction with a Large-scale {C}hinese Title Dataset",
